@@ -1,2 +1,2 @@
-# class_survival_101
-A brief code example in association with presentations about Survival Analytics
+# Survival 101 - Supporting Code
+Foo
