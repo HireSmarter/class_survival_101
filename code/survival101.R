@@ -15,7 +15,8 @@ demoETL <- function() {
   attr.data <- genAttritionData() %>%
                 dplyr::select(emp.id, hire.date, term.date, 
                               factor.x, factor.y, factor.z) %>%
-                dplyr::sample_n(10)
+                dplyr::sample_n(5)
+
   print(attr.data)
 
   ## slide 2
@@ -32,20 +33,6 @@ demoETL <- function() {
                 tenure.years = as.numeric(difftime(end.date, hire.date, units = "days")) / 365.25)
 
   print(attr.data %>% dplyr::select(-dplyr::contains("factor")))
-
-  ## slide 3
-  attr.data <- attr.data %>%
-              # normalize input variables into z scores
-              dplyr::mutate(
-                scale.x = scale(factor.x),
-                scale.y = scale(factor.y),
-                scale.z = scale(factor.z))
-
-  print(attr.data %>% dplyr::select(emp.id, dplyr::contains("scale")))
-
-  ## slide 4
-  print(glimpse(attr.data))
-
 }
 
 #' The main demo - designed to be run piece-by-piece on command line (see slides)
@@ -59,20 +46,9 @@ demoPrediction <- function(verbose = TRUE) {
   training.data <- dplyr::filter(attr.data, is.training)
   validation.data <- dplyr::filter(attr.data, !is.training)
 
-  # print(attr.data)
-  # print(summary(attr.data))
-  # print(glimpse(attr.data))
-  if (verbose) {
-    print(attr.data %>%
-      select(emp.id, hire.date, term.date, end.date, is.term, tenure.years)
-      %>% sample_n(10))
-    print(attr.data %>%
-      select(emp.id, is.term, tenure.years, factor.x, factor.y, factor.z)
-      %>% sample_n(10))
-    print(attr.data %>%
-      select(emp.id, is.term, tenure.years, scale.x, scale.y, scale.z)
-      %>% sample_n(10))
-  }
+  ## slide 3
+  if (verbose)
+    print(glimpse(attr.data))
 
   if (verbose)
     writeLines(">> Calculating survival object")
@@ -87,7 +63,7 @@ demoPrediction <- function(verbose = TRUE) {
   # NOTE: surv.fit is the same as a life table
 
   if (verbose) {
-    print(surv.fit)
+    print(summary(surv.fit))
     plot(surv.fit)
     print(plotSurvFit(surv.fit))
   }
@@ -109,7 +85,8 @@ demoPrediction <- function(verbose = TRUE) {
   cox.model <- survival::coxph(formula = surv.obj ~ scale.x + scale.y + scale.z,
                                data = training.data)
   if (verbose) {
-    print(summary(cox.model))
+    print(cox.model)
+    # print(summary(cox.model))
     # print(survival::cox.zph(cox.model))
   }
 
