@@ -268,7 +268,7 @@ survFitData <- function(survfit.data) {
 #' @param fit.data either a survfit() object or a survFitData() data.frame
 #' @return a ggplot2 plot
 plotSurvFit <- function(surv.data) {
-  
+
   # if they send a survfit object, convert it to a proper data frame
   if (class(surv.data) == "survfit")
     surv.data <- survFitData(surv.data)
@@ -325,11 +325,11 @@ plotSurvAUC <- function(roc.data) {
 
   p <- p + ggplot2::scale_x_continuous(name = "False Positive Rate (1 - Specificity)",
                                        breaks = seq(0, 1, 0.2),
-                                       limits = c(0,1),
+                                       limits = c(0, 1),
                                        labels = scales::percent)
   p <- p + ggplot2::scale_y_continuous(name = "True Positive Rate (Sensitivity)",
                                        breaks = seq(0, 1, 0.2),
-                                       limits = c(0,1),
+                                       limits = c(0, 1),
                                        labels = scales::percent)
 
   p <- p + ggplot2::theme_bw()
