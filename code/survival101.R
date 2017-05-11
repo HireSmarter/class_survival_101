@@ -7,8 +7,49 @@
 library(dplyr)
 library(lubridate)
 
+#' show how to get from simple HR data to the full dataset
+# this is all manual because it's a code example in the presentation
+demoETL <- function() {
+  ## slide 1
+  # get 10 records from a random sample
+  attr.data <- genAttritionData() %>%
+                dplyr::select(emp.id, hire.date, term.date, 
+                              factor.x, factor.y, factor.z) %>%
+                dplyr::sample_n(10)
+  print(attr.data)
+
+  ## slide 2
+  # censor.date is the last date we can see terminations (e.g. today)  
+  censor.date <- lubridate::mdy("5.1.2017", tz = "UTC")
+
+  attr.data <- attr.data %>%
+             dplyr::mutate(
+                # if term.date is NA, they have not terminated
+                is.term = ! is.na(term.date),
+                # end.date is a catch-all date for censor.date *or* term.date
+                end.date = dplyr::if_else(is.term, term.date, censor.date),
+                # tenure from simple date subtraction
+                tenure.years = as.numeric(difftime(end.date, hire.date, units = "days")) / 365.25)
+
+  print(attr.data %>% dplyr::select(-dplyr::contains("factor")))
+
+  ## slide 3
+  attr.data <- attr.data %>%
+              # normalize input variables into z scores
+              dplyr::mutate(
+                scale.x = scale(factor.x),
+                scale.y = scale(factor.y),
+                scale.z = scale(factor.z))
+
+  print(attr.data %>% dplyr::select(emp.id, dplyr::contains("scale")))
+
+  ## slide 4
+  print(glimpse(attr.data))
+
+}
+
 #' The main demo - designed to be run piece-by-piece on command line (see slides)
-survivalDemo <- function(verbose = TRUE) {
+demoPrediction <- function(verbose = TRUE) {
 
   if (verbose)
     writeLines(">> Generating test data")
@@ -166,12 +207,12 @@ genRandomSpans <- function(label, n,
                            tenure.mean, tenure.sd) {
 
   # turn censor date to posix
-  censor.posix <- lubridate::mdy_hms(stringr::str_trim(censor.date), truncated = 3)
+  censor.posix <- lubridate::mdy(stringr::str_trim(censor.date), tz = "UTC")
 
   # random uniform distro of hire dates between given
   hire.date <- runif(n,
-    min = lubridate::mdy_hms(stringr::str_trim(hire.start), truncated = 3),
-    max = lubridate::mdy_hms(stringr::str_trim(hire.end), truncated = 3))
+    min = lubridate::mdy(stringr::str_trim(hire.start), tz = "UTC"),
+    max = lubridate::mdy(stringr::str_trim(hire.end), tz = "UTC"))
 
   # make hire.date a proper POSIXct date, since runif turned it to an integer
   hire.date <- as.POSIXct(hire.date, tz = "UTC", origin = "1970-01-01")
@@ -186,12 +227,12 @@ genRandomSpans <- function(label, n,
           # set the term date based on our random tenure.days
           term.date = hire.date + lubridate::days(tenure.days),
           # logical variable whether we know it's termed based on right censoring
-          is.term = term.date >= censor.posix,
+          is.term = term.date <= censor.posix,
           # NA term dates if they are censored.
           # dplyr's if_else preserves types
-          term.date = dplyr::if_else(is.term, as.POSIXct(NA), term.date),
+          term.date = dplyr::if_else(is.term, term.date, as.POSIXct(NA)),
           # create separate end.date field to encompass termination or censoring
-          end.date = dplyr::if_else(is.term, censor.posix, term.date),
+          end.date = dplyr::if_else(is.term, term.date, censor.posix),
           # recalculate known tenure based on end.date
           tenure.years = as.numeric(difftime(end.date, hire.date, units = "days")) / 365.25,
           # create amazingly fantastic independent variables with some gaussian noise
