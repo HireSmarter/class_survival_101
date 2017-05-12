@@ -60,12 +60,8 @@ demoPrediction <- function(verbose = TRUE) {
 
   surv.fit <- survival::survfit(surv.obj ~ 1)
 
-  # NOTE: surv.fit is the same as a life table
-
   if (verbose) {
     print(summary(surv.fit))
-    plot(surv.fit)
-    print(plotSurvFit(surv.fit))
   }
 
   if (verbose)
@@ -75,8 +71,6 @@ demoPrediction <- function(verbose = TRUE) {
 
   if (verbose) {
     print(surv.fit.label)
-    plot(surv.fit.label)
-    print(plotSurvFit(surv.fit.label))
   }
 
   if (verbose)
@@ -86,8 +80,6 @@ demoPrediction <- function(verbose = TRUE) {
                                data = training.data)
   if (verbose) {
     print(cox.model)
-    # print(summary(cox.model))
-    # print(survival::cox.zph(cox.model))
   }
 
   if (verbose)
@@ -107,9 +99,6 @@ demoPrediction <- function(verbose = TRUE) {
                                       marker = cox.pred,
                                       predict.time = 1,
                                       lambda = 0.003)
-                                      # method = "KM")
-  print(plotSurvAUC(roc.obj))
-
   return(roc.obj$AUC)
 }
 
@@ -336,7 +325,7 @@ plotSurvAUC <- function(roc.data) {
 
   p <- ggplot2::ggplot(plot.data,
                        ggplot2::aes(x = fpr, y = tpr))
-  p <- p + ggplot2::geom_line(size = 2, col = "slateblue")
+  p <- p + ggplot2::geom_line(size = 2, col = "steelblue")
 
   p <- p + ggplot2::geom_abline(intercept = 0, slope = 1, linetype = "dashed",
                                 alpha = 0.5, size = 1, col = "black")
@@ -354,5 +343,4 @@ plotSurvAUC <- function(roc.data) {
   p <- p + ggplot2::theme(panel.border = ggplot2::element_blank())
 
   return(p)
-
 }
