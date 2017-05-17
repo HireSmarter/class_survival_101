@@ -125,8 +125,6 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 - **Engineering Roots** - How long until a machine fails?
 - **Social Science** - How long do people live?
 - **Employment** - How long until an employee terminates? or promotes?
-<br/>
-<br/>
 - **In General** - "Expected duration of time until one or more events happen"
 - Artfully combines turnover and tenure
 
