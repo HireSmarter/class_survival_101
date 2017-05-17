@@ -267,10 +267,6 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 
 ---
 
-
-![](../images/rlogo.png)
-![](../images/github.png)
-
 ## Deeper Dive:
 
 # Predicting Survival<br/>with Proportional Hazard
@@ -556,8 +552,6 @@ n= 320, number of events= 125
 ---
 
 # Download and Experiment With this Code
-
-![](../images/github.png)
 
 - These slides will be on PAW website
 <br/><br/>
