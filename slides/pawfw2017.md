@@ -36,9 +36,8 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 
 ---
 
-![](../images/timey_wimey.jpg)
-
 # Turnover and Tenure:
+
 ## A Timey-Wimey Relationship
 
 ---
@@ -202,8 +201,6 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 ---
 
 # Don't Use Logistic Methods<br/>to Predict Attrition!
-
-![](../images/no_circle.png)
 
 #### Commonly Done:
 - Predict one-year attrition with logistic
