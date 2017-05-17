@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock+SC|Roboto|Titillium+Web|Ubuntu+Mono');
+
+@page {
+  size: 1210px 681px;
+  margin: 0;
+}
+@media print {
+  /* line 32, ../sass/_ta_theme.scss */
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+/* line 40, ../sass/_ta_theme.scss */
+.remark-slide-content {
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+/* line 45, ../sass/_ta_theme.scss */
+.remark-slide-content h1, .remark-slide-content h2, .remark-slide-content h3, .remark-slide-content h4, .remark-slide-content h5, .remark-slide-content h6 {
+  font-family: 'Titillium Web', sans-serif;
+  color: #002b45;
+  line-height: 1.2;
+}
+/* line 52, ../sass/_ta_theme.scss */
+.remark-slide-content h1, .remark-slide-content h2 {
+  text-align: center;
+}
+/* line 56, ../sass/_ta_theme.scss */
+.remark-slide-content h1 {
+  font-size: 55px;
+}
+/* line 57, ../sass/_ta_theme.scss */
+.remark-slide-content h2 {
+  font-size: 45px;
+}
+/* line 58, ../sass/_ta_theme.scss */
+.remark-slide-content h3 {
+  font-size: 35px;
+}
+/* line 59, ../sass/_ta_theme.scss */
+.remark-slide-content h4 {
+  font-size: 25px;
+}
+/* line 60, ../sass/_ta_theme.scss */
+.remark-slide-content h5 {
+  font-size: 20px;
+}
+/* line 61, ../sass/_ta_theme.scss */
+.remark-slide-content h6 {
+  font-size: 15px;
+}
+/* line 63, ../sass/_ta_theme.scss */
+.remark-slide-content p, .remark-slide-content a, .remark-slide-content li {
+  color: #303030;
+  font-size: 24px;
+  line-height: 1.2;
+}
+/* line 69, ../sass/_ta_theme.scss */
+.remark-slide-content a {
+  color: #006f73;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* line 74, ../sass/_ta_theme.scss */
+.remark-slide-content a:hover, .remark-slide-content a:focus {
+  color: #00989e;
+  text-decoration: underline;
+}
+/* line 81, ../sass/_ta_theme.scss */
+.remark-slide-content img {
+  vertical-align: top;
+  float: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 92, ../sass/_ta_theme.scss */
+.remark-slide-content .float-right {
+  vertical-align: top;
+  float: right;
+  max-width: 49%;
+  height: auto;
+}
+/* line 99, ../sass/_ta_theme.scss */
+.remark-slide-content .float-right30 {
+  vertical-align: top;
+  float: right;
+  max-width: 30%;
+  height: auto;
+}
+/* line 106, ../sass/_ta_theme.scss */
+.remark-slide-content .float-right20 {
+  vertical-align: top;
+  float: right;
+  max-width: 20%;
+  height: auto;
+}
+/* line 113, ../sass/_ta_theme.scss */
+.remark-slide-content .float-left {
+  vertical-align: top;
+  float: left;
+  max-width: 49%;
+  height: auto;
+}
+/* line 120, ../sass/_ta_theme.scss */
+.remark-slide-content .float-left30 {
+  vertical-align: top;
+  float: left;
+  max-width: 30%;
+  height: auto;
+}
+/* line 127, ../sass/_ta_theme.scss */
+.remark-slide-content .float-left20 {
+  vertical-align: top;
+  float: left;
+  max-width: 20%;
+  height: auto;
+}
+/* line 134, ../sass/_ta_theme.scss */
+.remark-slide-content .left {
+  display: block;
+  text-align: left;
+}
+/* line 139, ../sass/_ta_theme.scss */
+.remark-slide-content .center {
+  display: block;
+  text-align: center;
+}
+/* line 144, ../sass/_ta_theme.scss */
+.remark-slide-content .right {
+  display: block;
+  text-align: right;
+}
+/* line 149, ../sass/_ta_theme.scss */
+.remark-slide-content .pad-text {
+  background: #002b45 !important;
+  color: #ffffff !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+/* line 159, ../sass/_ta_theme.scss */
+.remark-slide-content .pad-header {
+  background: #002b45 !important;
+  color: #ffffff !important;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+/* line 171, ../sass/_ta_theme.scss */
+.remark-slide-content ul {
+  list-style: none;
+  text-indent: -1.7em;
+}
+/* line 178, ../sass/_ta_theme.scss */
+.remark-slide-content ul li:before {
+  content: "\25b8";
+  display: block;
+  float: left;
+  width: 1.2em;
+  color: #c66951;
+}
+/* line 186, ../sass/_ta_theme.scss */
+.remark-slide-content ul li ul li:before {
+  content: "\25b9";
+  display: block;
+  float: left;
+  width: 1.2em;
+  color: #c66951;
+}
+/* line 196, ../sass/_ta_theme.scss */
+.remark-slide-content blockquote {
+  width: 96%;
+  left: 2%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #e0e0e0;
+}
+/* line 203, ../sass/_ta_theme.scss */
+.remark-slide-content blockquote p {
+  color: #303030;
+  font-family: 'Overlock SC', cursive;
+  text-align: center;
+}
+/* line 211, ../sass/_ta_theme.scss */
+.remark-slide-content table {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 216, ../sass/_ta_theme.scss */
+.remark-slide-content table th {
+  background: #3d4c5b;
+  color: #f0f0f0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 225, ../sass/_ta_theme.scss */
+.remark-slide-content table td {
+  color: #303030;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 2, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table th {
+  background-color: #3d4c5b;
+}
+/* line 4, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table th.even, .remark-slide-content table th:nth-child(2n) {
+  background-color: #3d4c5b;
+}
+/* line 8, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tr.odd td, .remark-slide-content table tr:nth-child(2n+1) td {
+  background-color: #cccccc;
+}
+/* line 10, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tr.odd td.even, .remark-slide-content table tr.odd td:nth-child(2n), .remark-slide-content table tr:nth-child(2n+1) td.even, .remark-slide-content table tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: #cccccc;
+}
+/* line 14, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tr.even td {
+  background-color: #e5e5e5;
+}
+/* line 16, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tr.even td.even, .remark-slide-content table tr.even td:nth-child(2n) {
+  background-color: #e5e5e5;
+}
+/* line 19, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tfoot th, .remark-slide-content table tfoot td {
+  background-color: white;
+}
+/* line 21, ../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.remark-slide-content table tfoot th.even, .remark-slide-content table tfoot th:nth-child(2n), .remark-slide-content table tfoot td.even, .remark-slide-content table tfoot td:nth-child(2n) {
+  background-color: white;
+}
+/* line 236, ../sass/_ta_theme.scss */
+.remark-slide-content .huge-text h1, .remark-slide-content .huge-text h2, .remark-slide-content .huge-text h3, .remark-slide-content .huge-text h4, .remark-slide-content .huge-text h5, .remark-slide-content .huge-text h6, .remark-slide-content .huge-text p, .remark-slide-content .huge-text a, .remark-slide-content .huge-text ul, .remark-slide-content .huge-text ol, .remark-slide-content .huge-text li {
+  font-size: 4rem;
+}
+/* line 241, ../sass/_ta_theme.scss */
+.remark-slide-content .bigger-text h1, .remark-slide-content .bigger-text h2, .remark-slide-content .bigger-text h3, .remark-slide-content .bigger-text h4, .remark-slide-content .bigger-text h5, .remark-slide-content .bigger-text h6, .remark-slide-content .bigger-text p, .remark-slide-content .bigger-text a, .remark-slide-content .bigger-text ul, .remark-slide-content .bigger-text ol, .remark-slide-content .bigger-text li {
+  font-size: 2.5rem;
+}
+/* line 246, ../sass/_ta_theme.scss */
+.remark-slide-content .big-text h1, .remark-slide-content .big-text h2, .remark-slide-content .big-text h3, .remark-slide-content .big-text h4, .remark-slide-content .big-text h5, .remark-slide-content .big-text h6, .remark-slide-content .big-text p, .remark-slide-content .big-text a, .remark-slide-content .big-text ul, .remark-slide-content .big-text ol, .remark-slide-content .big-text li {
+  font-size: 2rem;
+}
+/* line 251, ../sass/_ta_theme.scss */
+.remark-slide-content .small-text h1, .remark-slide-content .small-text h2, .remark-slide-content .small-text h3, .remark-slide-content .small-text h4, .remark-slide-content .small-text h5, .remark-slide-content .small-text h6, .remark-slide-content .small-text p, .remark-slide-content .small-text a, .remark-slide-content .small-text ul, .remark-slide-content .small-text ol, .remark-slide-content .small-text li {
+  font-size: 1.2rem;
+}
+/* line 256, ../sass/_ta_theme.scss */
+.remark-slide-content .tiny-text h1, .remark-slide-content .tiny-text h2, .remark-slide-content .tiny-text h3, .remark-slide-content .tiny-text h4, .remark-slide-content .tiny-text h5, .remark-slide-content .tiny-text h6, .remark-slide-content .tiny-text p, .remark-slide-content .tiny-text a, .remark-slide-content .tiny-text ul, .remark-slide-content .tiny-text ol, .remark-slide-content .tiny-text li {
+  font-size: 1.0rem;
+}
+/* line 260, ../sass/_ta_theme.scss */
+.remark-slide-content .capitalize {
+  text-transform: capitalize;
+}
+/* line 261, ../sass/_ta_theme.scss */
+.remark-slide-content .highlight {
+  color: #c66951;
+}
+/* line 262, ../sass/_ta_theme.scss */
+.remark-slide-content .red-text {
+  color: #cc0000 !important;
+}
+/* line 263, ../sass/_ta_theme.scss */
+.remark-slide-content .blue-text {
+  color: #0000cc !important;
+}
+/* line 264, ../sass/_ta_theme.scss */
+.remark-slide-content .orange-text {
+  color: #cc6600 !important;
+}
+/* line 265, ../sass/_ta_theme.scss */
+.remark-slide-content .green-text {
+  color: #00cc00 !important;
+}
+/* line 266, ../sass/_ta_theme.scss */
+.remark-slide-content .white-text {
+  color: #000000 !important;
+}
+
+/* line 271, ../sass/_ta_theme.scss */
+.title-slide {
+  background: #002b45;
+}
+/* line 274, ../sass/_ta_theme.scss */
+.title-slide h1, .title-slide h2 {
+  color: #e85f3f;
+  text-align: left;
+}
+/* line 278, ../sass/_ta_theme.scss */
+.title-slide h3, .title-slide h4, .title-slide h5, .title-slide h6 {
+  color: #d3d3d3;
+  text-align: left;
+}
+/* line 282, ../sass/_ta_theme.scss */
+.title-slide p, .title-slide a, .title-slide li {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* line 289, ../sass/_ta_theme.scss */
+.section-slide {
+  background: #33556a;
+  vertical-align: middle;
+}
+/* line 293, ../sass/_ta_theme.scss */
+.section-slide h1 {
+  color: #e85f3f;
+  font-size: 4rem;
+}
+/* line 297, ../sass/_ta_theme.scss */
+.section-slide h2 {
+  color: #d3d3d3;
+  font-size: 3.5rem;
+  text-align: center;
+}
+/* line 302, ../sass/_ta_theme.scss */
+.section-slide h3, .section-slide h4, .section-slide h5, .section-slide h6 {
+  color: #d3d3d3;
+  text-align: center;
+}
+/* line 306, ../sass/_ta_theme.scss */
+.section-slide p, .section-slide li {
+  color: #c66951;
+}
+/* line 309, ../sass/_ta_theme.scss */
+.section-slide a {
+  color: #d3d3d3;
+}
+
+/* line 314, ../sass/_ta_theme.scss */
+div.footer {
+  width: 100%;
+  font-size: 12px;
+  color: #333333;
+  opacity: 0.5;
+}
+/* line 320, ../sass/_ta_theme.scss */
+div.footer span.left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+/* line 325, ../sass/_ta_theme.scss */
+div.footer span.center {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* line 333, ../sass/_ta_theme.scss */
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+/* line 337, ../sass/_ta_theme.scss */
+.remark-slide-number {
+  font-size: 12px;
+  color: #333333;
+  opacity: 0.5;
+}
+
+/* line 343, ../sass/_ta_theme.scss */
+.remark-container {
+  background-color: #565656;
+}
