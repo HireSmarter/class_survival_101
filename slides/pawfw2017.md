@@ -109,7 +109,7 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 
 ### What if you could see attrition<br/>at every point in time?
 
-- “One Year” only matters to accountants and astronomers
+- "One Year" only matters to accountants and astronomers
 
 - Cumulative Breakeven matters more to the business
 
@@ -127,7 +127,7 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 - **Employment** - How long until an employee terminates? or promotes?
 <br/>
 <br/>
-- **In General** - “Expected duration of time until one or more events happen”
+- **In General** - "Expected duration of time until one or more events happen"
 - Artfully combines turnover and tenure
 
 > Lots of competing jargon and syntax from many application domains:   
@@ -212,7 +212,7 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 - Use tenure as a variable along with others
 
 #### Common Result:
-- “The biggest cause of termination is tenure”
+- "The biggest cause of termination is tenure"
   - Not an actionable coefficient
 - Ignores nuances available to survival methods
 - Mishandles current employee tenure
@@ -224,11 +224,11 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 
 ![](../images/surv_thresholds_p12.png)
 
-#### Most Survival models are “Proportional Hazard”
+#### Most Survival models are "Proportional Hazard"
 - Start with Base Survival rate
 - Convert to Base Cumulative Hazard rate
 <br/><br/>
-- Multiply Cumulative Hazard by a single factor<br/>(hence “Proportional Hazard")
+- Multiply Cumulative Hazard by a single factor<br/>(hence "Proportional Hazard")
 <br/><br/>
 - Linear changes to Hazard lead<br/>to a *rotation* of Survival Curve
 
@@ -260,12 +260,12 @@ Demo Code: https://github.com/talentanalytics/class_survival_101/
 ![](../images/teller_surv_bands_p12.png)
 
 #### The Model Predicts:
-- “Dark Blue” hires will survive the longest
-- “Light Blue” hires will survive above-median
+- "Dark Blue" hires will survive the longest
+- "Light Blue" hires will survive above-median
 <br/><br/>
-- “Grey” survival curve is current median survival.
+- "Grey" survival curve is current median survival.
 <br/><br/>
-- “Light Red” and “Dark Red” candidates are not likely to survive.
+- "Light Red" and "Dark Red" candidates are not likely to survive.
 
 ---
 
@@ -412,7 +412,7 @@ $ is.training  <lgl> TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRU...
 *> surv.obj <- survival::Surv(training.data$tenure.years, training.data$is.term)
 ```
 
-- Needs “time variable” `tenure.years` and “event variable” `is.term`
+- Needs "time variable" `tenure.years` and "event variable" `is.term`
 
 #### `survival::survfit` is the Kaplan-Meier Estimator of `\(S_0(t)\)`
 
