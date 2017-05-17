@@ -264,15 +264,15 @@ https://github.com/talentanalytics/class_survival_101/
 
 # Formulas and Jargon
 
-**Hazard Function:**  &nbsp;&nbsp; `h(t)`
+**Hazard Function:**   `h(t)`
 - Probability of termination at time *t*, conditional on survival up to time t
 - Ranges from 0 to 1 (typically very small)
 
-**Cumulative Hazard Function:** &nbsp; `H(t) = cumsum(h(t) = -log(S(t))`
+**Cumulative Hazard Function:**  `H(t) = cumsum(h(t)) = -log(S(t))`
 - Cumulative conditional probability of termination up to time *t*
 - Ranges from 0 to 4ish (theoretically to Infinity)
 
-**Survival Function:** &nbsp;&nbsp; `S(t) = exp(-H(t))`
+**Survival Function:**  `S(t) = exp(-H(t))`
 - Probability that termination will be later than time *t*
 - Ranges from 1 to 0
 
