@@ -11,10 +11,11 @@ Demo code supporting various presentations and classes about Prediction with Sur
 ## The Slides
 
 The course slides for PAW Workforce are now online in this repository.
-They are HTML slides produced with [remark](https://github.com/gnab/remark) - if you clone this repository and open [slides/pawfw2017.html](slides/pawfw2017.html) in a browser, then you'll see a nice powerpoint-like presentation in your browser.
-Type "?" to get the list of commands that you can use while walking through the slides.
+The easiest way to view them is to look at the PDF: [slides/pawfw2017.pdf](slides/pawfw2017.pdf).
 
-You can also view the paw slides directly in [slides/pawfw2017.md](slides/pawfw2017.md) - though they are not as pretty.
+They are actually HTML slides produced with [remark](https://github.com/gnab/remark) - if you clone this repository and open [slides/pawfw2017.html](slides/pawfw2017.html) in a browser, then you'll see a nice powerpoint-like presentation in your browser.
+Type "?" to get the list of commands that you can use while walking through the slides.
+Much better than powerpoint if you are comfortable with text.
 
 ## The Code
 The PAW code is in [code/survival101.R](code/survival101.R).
