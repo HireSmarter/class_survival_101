@@ -3,22 +3,19 @@
 #### by Pasha Roberts
 
 ## Context
-Demo code supporting various presentations and classes about Prediction with Survival Analytics, including:
-
-- Predictive Analytics World 2017 ["How to Use Survival Analytics to Predict Employee Turnover"](http://www.predictiveanalyticsworld.com/workforce/2017/agenda_overview.php)
-- UC Irvine course ["Predictive HR and Workforce Analytics"](https://ce.uci.edu/courses/sectiondetail.aspx?year=2016&term=Fall&sid=00500)
+Demo code supporting various presentations and classes about Prediction with Survival Analytics, including the UC Irvine course ["Predictive HR and Workforce Analytics"](https://ce.uci.edu/courses/sectiondetail.aspx?year=2017&term=SUMMER&sid=00224).
 
 ## The Slides
 
-The course slides for PAW Workforce are now online in this repository.
-The easiest way to view them is to look at the PDF: [slides/pawfw2017.pdf](slides/pawfw2017.pdf).
+The slides are now online in this repository.
+The easiest way to view them is to look at the PDF: [slides/survival_101.pdf](slides/survival_101.pdf).
 
-They are actually HTML slides produced with [remark](https://github.com/gnab/remark) - if you clone this repository and open [slides/pawfw2017.html](slides/pawfw2017.html) in a browser, then you'll see a nice powerpoint-like presentation in your browser.
+They are actually HTML slides produced with [remark](https://github.com/gnab/remark) - if you clone this repository and open [slides/survival_101.html](slides/survival_101.html) in a browser, then you'll see a nice powerpoint-like presentation in your browser.
 Type "?" to get the list of commands that you can use while walking through the slides.
 Much better than powerpoint if you are comfortable with text.
 
 ## The Code
-The PAW code is in [code/survival101.R](code/survival101.R).
+The code is in [code/survival101.R](code/survival101.R).
 The functions include:
 
 - `demoETL()` walks through the conversion of raw HR data into a data frame usable for survival analytics.
