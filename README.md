@@ -1,4 +1,4 @@
-# Files for Survival 101 Classes
+# How to Use Survival to Predict Churn (in R)
 
 #### by Pasha Roberts
 
