@@ -3,7 +3,7 @@
 #### by Pasha Roberts
 
 ## Context
-Demo code supporting various presentations and classes about Prediction with Survival Analytics, including the UC Irvine course ["Predictive HR and Workforce Analytics"](https://ce.uci.edu/courses/sectiondetail.aspx?year=2017&term=SUMMER&sid=00224).
+Demo code supporting various presentations and classes about Prediction with Survival Analytics.
 
 ## The Slides
 
