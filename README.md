@@ -1,6 +1,6 @@
 # How to Use Survival to Predict Churn (in R)
 
-#### by Pasha Roberts
+#### by Pasha Roberts ~ Chief Scientist, Talent Analytics
 
 ## Context
 Demo code supporting various presentations and classes about Prediction with Survival Analytics.
